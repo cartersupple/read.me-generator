@@ -42,7 +42,24 @@ const inputs = () => {
             'Open'],
         },
         {
-            
+            type: 'input',
+            name: 'installation',
+            message:'Write steps to install project.',
+        },
+        {
+            type:'input',
+            name:'usage',
+            message:'Write purpose of application.',
+        },
+        {
+            type: 'input',
+            name: 'contributors',
+            message: 'Write name of contributors if any.',
         }
-    ])
+        {
+            type:'input',
+            name:'tests',
+            message:'Write steps of a test.',
+        }
+    ]);
 }
