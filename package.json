@@ -1,0 +1,26 @@
+{
+  "name": "read.me-generator",
+  "version": "1.0.0",
+  "description": "Node.js app to create read.me files for github projects based on user input.",
+  "main": "app.js",
+  "scripts": {
+    "test": "\"hey\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cartersupple/read.me-generator.git"
+  },
+  "keywords": [
+    "Read.me",
+    "Generator"
+  ],
+  "author": "Carter Supple",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cartersupple/read.me-generator/issues"
+  },
+  "homepage": "https://github.com/cartersupple/read.me-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
