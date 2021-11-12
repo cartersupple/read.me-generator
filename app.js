@@ -6,3 +6,43 @@ const inquirer = require('inquirer');
 const makeReadMe = require('makeReadMe.js')
 
 // make questions for inputs
+const inputs = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter your GitHub username as it appears on your account.',
+        },
+        {
+            type: 'input',
+            name:'email',
+            message: 'Enter your email as it appears on your account.',
+        },
+        {
+            type:'input',
+            name:'project name',
+            message:'Enter a name for your project.',
+        },
+        {
+            type: 'input',
+            name:'description',
+            message:'Enter a description for your project.',
+        },
+        {
+            type: 'list',
+            name:'license',
+            message:'Select the license for your project.',
+            choices: [ 
+            'Apache',
+            'Academic',
+            'GNU',
+            'ISC',
+            'MIT',
+            'Mozilla',
+            'Open'],
+        },
+        {
+            
+        }
+    ])
+}
