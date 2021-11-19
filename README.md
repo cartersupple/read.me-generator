@@ -15,6 +15,7 @@
     Open terminal, write node followed by app, then fill in the questions.
 ## Usage 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/89411805/142698631-44c6be49-7bad-459b-8b01-70ecbb7953e9.gif)
+
     Create a professional readme.md file to accompany your project and save time on the typing.
 ## License 
     This project is license under MIT
