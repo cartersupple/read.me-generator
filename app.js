@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 // link to where the read.me page will generate
-const makeReadMe = require('makeReadMe.js')
+const makeReadMe = require('generatedReadMe.js')
 
 // make questions for inputs
 const inputs = () => {
@@ -12,6 +12,7 @@ const inputs = () => {
             type: 'input',
             name: 'github',
             message: 'Enter your GitHub username as it appears on your account.',
+// console.logs a reminder if null
             validate: userInput => {
                 if (userInput) {
                     return true;
@@ -111,4 +112,33 @@ const inputs = () => {
         }
     ]);
 };
+
+// writes README file  
+const writeReadMe = data => {
+    fs.writeReadMe('README.md', data, err => {
+        // if error 
+        if (err) {
+            console.log(err);
+            return;
+        // when README is generated 
+        } else {
+            console.log("Your README has been generated.")
+        }
+    })
+}; 
+
+// function call to start read.me generator
+inputs()
+// get user inputs
+.then(answers => {
+    return makeReadMe(answers);
+})
+// takes inputs to fill in questions 
+.then(data => {
+    return writeReadMe(data);
+})
+//look for errors 
+.catch(err => {
+    console.log(err)
+})
 
