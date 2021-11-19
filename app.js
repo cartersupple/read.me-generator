@@ -37,7 +37,7 @@ const inputs = () => {
         },
         {
             type:'input',
-            name:'project name',
+            name:'title',
             message:'Enter a name for your project.',
             validate: userInput => {
                 if (userInput) {
