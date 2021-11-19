@@ -1,5 +1,5 @@
 // function to fill in read.me with user inputs
-const generateReadMe = data => {
+const generatedReadMe = data => {
     return `# ${data.title}
     ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
     
@@ -30,4 +30,4 @@ const generateReadMe = data => {
   
   
   // use for importing Markdown in index 
-  module.exports = generateReadMe;
+  module.exports = generatedReadMe;

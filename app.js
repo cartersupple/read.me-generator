@@ -3,7 +3,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 // link to where the read.me page will generate
-const makeReadMe = require('generatedReadMe.js')
+const makeReadMe = require('./generatedReadMe')
 
 // make questions for inputs
 const inputs = () => {
@@ -112,10 +112,9 @@ const inputs = () => {
         }
     ]);
 };
-
 // writes README file  
-const writeReadMe = data => {
-    fs.writeReadMe('README.md', data, err => {
+const writeFile = data => {
+    fs.writeFile('README.md', data, err => {
         // if error 
         if (err) {
             console.log(err);
@@ -126,7 +125,6 @@ const writeReadMe = data => {
         }
     })
 }; 
-
 // function call to start read.me generator
 inputs()
 // get user inputs
@@ -135,10 +133,9 @@ inputs()
 })
 // takes inputs to fill in questions 
 .then(data => {
-    return writeReadMe(data);
+    return writeFile(data);
 })
 //look for errors 
 .catch(err => {
     console.log(err)
 })
-
