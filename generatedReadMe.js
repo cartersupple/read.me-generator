@@ -2,10 +2,9 @@
 const generatedReadMe = data => {
     return `# ${data.title}
     ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
-    
-    ## Description 
+## Description 
     ${data.description}
-    ## Table of Contents
+## Table of Contents
     * [Installation](#installation)
     * [Usage](#usage)
     * [License](#license)
@@ -13,17 +12,17 @@ const generatedReadMe = data => {
     * [Tests](#tests)
     * [Questions](#questions)
     
-    ## Installation 
+## Installation 
     ${data.installation}
-    ## Usage 
+## Usage 
     ${data.usage}
-    ## License 
+## License 
     This project is license under ${data.license}
-    ## Contributing 
+## Contributing 
     ${data.contributors}
-    ## Tests
+## Tests
     ${data.tests}
-    ## Questions
+## Questions
     If you have any questions about this projects, please contact me directly at ${data.email}. You can view more of my projects at https://github.com/${data.github}.
   `;
   }
